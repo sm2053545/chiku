@@ -20,6 +20,7 @@
       touch-action: pan-y;
     }
 
+
     /* ===== SCENE SYSTEM ===== */
     .scene {
       position: fixed; inset: 0;
@@ -34,6 +35,7 @@
       -webkit-overflow-scrolling: touch;
     }
     .scene.active { opacity: 1; pointer-events: auto; }
+
 
     /* ===== NEBULA / AURORA BACKGROUND ===== */
     #nebula-bg {
@@ -109,8 +111,10 @@
       100% { transform:translate(10vw,-12vh) scale(0.75); }
     }
 
+
     /* ===== PETAL CANVAS ===== */
     #petal-canvas { position:fixed; inset:0; pointer-events:none; z-index:5; }
+
 
     /* ===== MUSIC ===== */
     #music-btn {
@@ -120,6 +124,7 @@
       cursor:pointer; font-family:'Dancing Script',cursive; font-size:0.9rem;
       backdrop-filter:blur(12px); display:flex; align-items:center; gap:0.4rem;
     }
+
 
     /* ===================================================
        SCENE 1 — INTRO
@@ -153,6 +158,7 @@
     .s1-hearts { font-size:2rem; margin-top:1rem; animation: heartBeat 1.5s ease infinite; }
     @keyframes heartBeat { 0%,100%{transform:scale(1)} 50%{transform:scale(1.2)} }
 
+
     /* ===================================================
        SCENE 2 — BIRTHDAY CAKE
        =================================================== */
@@ -172,6 +178,7 @@
       color:rgba(255,240,245,0.7); margin-bottom:2rem;
     }
 
+
     /* Canvas cake */
     .cake-scene-wrap {
       position:relative; display:inline-block; cursor:pointer;
@@ -185,11 +192,13 @@
       touch-action: none;
     }
 
+
     .s2-hint {
       font-family:'Dancing Script',cursive; font-size:clamp(1rem,3vw,1.3rem);
       color:var(--gold); margin-top:1rem; animation:tapPulse 1.5s ease infinite;
       min-height:2rem;
     }
+
 
     /* Knife cursor */
     .knife-cursor {
@@ -198,6 +207,7 @@
       filter:drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
       transition:none;
     }
+
 
     /* Confetti */
     .confetti-piece {
@@ -208,6 +218,7 @@
       0%{transform:translateY(-20px) rotate(0deg); opacity:1}
       100%{transform:translateY(100vh) rotate(720deg); opacity:0}
     }
+
 
     /* Continue button */
     .continue-btn {
@@ -221,6 +232,7 @@
     }
     .continue-btn.show { opacity:1; transform:translateY(0); }
     .continue-btn:active { transform:scale(0.97) translateY(0); }
+
 
     /* ===================================================
        SCENE 3 — MODAL
@@ -259,6 +271,7 @@
     }
     .modal-no:active { border-color:rgba(255,240,245,0.4); color:rgba(255,240,245,0.8); }
 
+
     /* ===================================================
        SCENE 4 — SPHERE
        =================================================== */
@@ -271,6 +284,7 @@
     }
     #s4::before { width:400px;height:400px;background:rgba(232,23,74,0.09);top:-100px;left:-100px; }
     #s4::after  { width:350px;height:350px;background:rgba(245,200,66,0.07);bottom:-80px;right:-80px; }
+
 
     /* Title/subtitle pinned to top of sphere scene */
     .s4-header {
@@ -291,6 +305,7 @@
     .s4-title .emoji { -webkit-text-fill-color:initial; background:none; -webkit-background-clip:initial; }
     .s4-sub { font-family:'Dancing Script',cursive; font-size:clamp(0.85rem,2.5vw,1.1rem); color:rgba(255,240,245,0.5); margin-bottom:0; }
     .sphere-label { margin-top:1.8rem; margin-bottom:0.4rem; }
+
 
     .sphere-scene {
       width:clamp(260px,48vw,420px); height:clamp(260px,48vw,420px);
@@ -334,6 +349,7 @@
     }
     .sphere-scene:hover .sphere-3d { animation-play-state:running; }
 
+
     /* One-shot lub-dub from center outward */
     .sphere-heartbeat { animation: lubDubOnce 2.4s ease-out 1 forwards; }
     @keyframes lubDubOnce {
@@ -344,6 +360,7 @@
       80%  { transform:scale(0.95); }
       100% { transform:scale(1); }
     }
+
 
     /* Floating photo intro cards (phase 1) */
     .float-photo {
@@ -369,6 +386,7 @@
       100% { transform:translateY(-108vh) translateX(0) rotate(0deg) scale(0.2); opacity:0; }
     }
 
+
     /* Sphere intro wrapper — hidden until phase 2 */
     .sphere-intro-wrap {
       opacity: 0;
@@ -381,6 +399,7 @@
       transform: scale(1);
       pointer-events: auto;
     }
+
 
     /* Shooting stars */
     .shooting-star {
@@ -398,6 +417,7 @@
       100% { transform:translate(220px,220px); opacity:0; }
     }
 
+
     /* ===================================================
        SCENE 5 — LOVE LETTER
        =================================================== */
@@ -406,6 +426,7 @@
     .envelope { font-size:clamp(5rem,15vw,9rem); display:block; transition:transform 0.3s ease; filter:drop-shadow(0 0 20px rgba(232,23,74,0.4)); }
     .envelope-wrap:hover .envelope { transform:scale(1.05) rotate(-3deg); }
     .env-hint { font-family:'Dancing Script',cursive; font-size:1.2rem; color:var(--gold); margin-top:0.5rem; animation:tapPulse 1.5s ease infinite; }
+
 
     .letter-content {
       max-width:600px; width:90%; opacity:0; transform:translateY(30px);
@@ -421,6 +442,7 @@
     .poem-text { font-family:'Noto Sans Devanagari',sans-serif; font-size:clamp(0.95rem,2.5vw,1.15rem); line-height:2.2; color:rgba(255,240,245,0.9); }
     .poem-stanza { margin-bottom:1.5rem; }
     .poem-line { display:block; }
+
 
     /* ===================================================
        SCENE 6 — PROMISES
@@ -448,6 +470,7 @@
     .promise-star.revealed .star-icon { transform:scale(1.2); }
     .star-text { font-family:'Dancing Script',cursive; font-size:0.75rem; color:rgba(255,240,245,0.4); text-align:center; padding:0 0.3rem; transition:all 0.4s ease; }
     .promise-star.revealed .star-text { color:rgba(255,240,245,0.9); font-size:0.8rem; }
+
 
     /* ===================================================
        SCENE 7 — GRAND FINALE
@@ -478,6 +501,7 @@
     }
     .finale-msg { font-family:'Dancing Script',cursive; font-size:clamp(1rem,2.5vw,1.4rem); color:rgba(255,240,245,0.7); margin-top:0.5rem; }
 
+
     /* ===== SHARED NEXT BUTTON ===== */
     .next-btn {
       margin-top:1.5rem; padding:0.8rem 2rem;
@@ -488,6 +512,7 @@
       touch-action:manipulation; min-height:48px;
     }
     .next-btn:active { background:rgba(232,23,74,0.35); transform:scale(0.97); }
+
 
     /* ===== MOBILE OVERRIDES ===== */
     @media (max-width: 480px) {
@@ -504,6 +529,7 @@
       .finale-title { font-size:clamp(2.5rem,10vw,6rem); }
       .finale-name { font-size:clamp(3.5rem,14vw,9rem); }
     }
+
 
     /* ===== FLOATING ROSES & HEARTS ===== */
     .fheart {
@@ -525,9 +551,11 @@
       100% { transform:translateY(-100vh) translateX(0) rotate(0deg) scale(0.1); opacity:0; }
     }
 
+
     /* ===== SPARKLE ===== */
     .sparkle { position:fixed; pointer-events:none; z-index:50; animation:sparkleAnim 1.4s ease-out forwards; }
     @keyframes sparkleAnim { 0%{opacity:1;transform:scale(0) rotate(0deg)} 50%{opacity:1;transform:scale(1) rotate(180deg)} 100%{opacity:0;transform:scale(0.4) rotate(360deg)} }
+
 
     /* ===== COUNTDOWN OVERLAY ===== */
     #countdown-overlay {
@@ -554,6 +582,7 @@
       100% { transform:scale(2.5); opacity:0; }
     }
 
+
     /* ===== LIGHTBOX ===== */
     #lightbox {
       display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92);
@@ -571,6 +600,7 @@
 </head>
 <body>
 
+
 <!-- Nebula aurora background -->
 <div id="nebula-bg">
   <div class="nebula-blob nb1"></div>
@@ -580,8 +610,10 @@
   <div class="nebula-blob nb5"></div>
 </div>
 
+
 <!-- Petal canvas -->
 <canvas id="petal-canvas"></canvas>
+
 
 <!-- Music -->
 <button id="music-btn" onclick="toggleMusic()">
@@ -591,6 +623,7 @@
 <audio id="track1" loop preload="auto" src="Happy Birthday Meri Jaan Song 🎂 Romantic Birthday Song for Girlfriend Wife Love %23happybirthday.mp3"></audio>
 <audio id="track2" loop preload="auto" src="Romantic Love Mashup 2025 VDJ Ayush DJ BKS Arijit Singh Songs Best Of Love Songs 2024.mp3"></audio>
 
+
 <!-- ===== SCENE 1: INTRO ===== -->
 <div class="scene active" id="s1" onclick="startTrack1();goScene(2)">
   <div class="s1-glow"></div>
@@ -599,19 +632,23 @@
   <div class="s1-tap">✨ Tap anywhere to begin ✨</div>
 </div>
 
+
 <!-- ===== SCENE 2: BIRTHDAY CAKE ===== -->
 <div class="scene" id="s2">
   <div class="s2-title">Happy Birthday!</div>
   <div class="s2-sub">Let's start the show, Chiku 🎉</div>
 
+
   <div class="cake-scene-wrap" id="cakeSceneWrap">
     <canvas id="cake-canvas" width="360" height="300"></canvas>
   </div>
+
 
   <div class="knife-cursor" id="knifeCursor">🔪</div>
   <div class="s2-hint" id="s2hint">Tap the cake to blow out the candles! 💨</div>
   <button class="continue-btn" id="s2continue" onclick="goScene(3)">Continue →</button>
 </div>
+
 
 <!-- ===== SCENE 3: MODAL ===== -->
 <div class="scene" id="s3">
@@ -626,12 +663,14 @@
   </div>
 </div>
 
+
 <!-- ===== SCENE 4: SPHERE ===== -->
 <div class="scene" id="s4">
   <div class="s4-header">
     <div class="s4-title">This is my world... <span class="emoji">🌍</span></div>
     <div class="s4-sub">Every photo here is a memory I treasure <span style="-webkit-text-fill-color:initial">💫</span></div>
   </div>
+
 
   <div class="sphere-intro-wrap" id="sphere-intro-wrap">
     <div class="sphere-heartbeat">
@@ -642,10 +681,13 @@
     </div>
   </div>
 
+
   <div class="sphere-label" id="sphere-label">My Love 💕</div>
+
 
   <button class="next-btn" onclick="goScene(5)" style="margin-top:1.5rem;">There's more... 💌</button>
 </div>
+
 
 <!-- ===== SCENE 5: LOVE LETTER ===== -->
 <div class="scene" id="s5">
@@ -659,33 +701,35 @@
     </div>
   </div>
 
+
   <div class="letter-content" id="letterContent">
     <div class="letter-paper">
-      <div class="letter-title">— तुम्हारे लिए —</div>
+      <div class="letter-title">— For Chiku —</div>
       <div class="poem-text">
         <div class="poem-stanza">
-          <span class="poem-line">तुम मेरी जिंदगी की रोशनी हो,</span>
-          <span class="poem-line">हर पल, हर लम्हा तुम्हारी खुशी हो।</span>
-          <span class="poem-line">जन्मदिन मुबारक हो मेरी जान,</span>
-          <span class="poem-line">तुम हो मेरे दिल की पहचान। 💖</span>
+          <span class="poem-line">You are braver than you believe,</span>
+          <span class="poem-line">stronger than every storm you've faced.</span>
+          <span class="poem-line">Kanha ji chose you for a reason —</span>
+          <span class="poem-line">Open your true potential and groww ✨</span>
         </div>
         <div class="poem-stanza">
-          <span class="poem-line">तुम्हारी मुस्कान से जग रोशन है,</span>
-          <span class="poem-line">तुम्हारे बिना ये दिल वीरान है।</span>
-          <span class="poem-line">आज तुम्हारा जन्मदिन है प्यारे,</span>
-          <span class="poem-line">तुम हो मेरे सपनों के सितारे। 🌟</span>
+          <span class="poem-line">Har muskil samay m himmat rkhna,</span>
+          <span class="poem-line">Tumko abhi bhut kuch krna h.</span>
+          <span class="poem-line">Radha ji has written something beautiful for you,</span>
+          <span class="poem-line">and nothing will ever dim your flame. 🌟</span>
         </div>
         <div class="poem-stanza">
-          <span class="poem-line">तुम हो मेरी धड़कन, मेरी सांस,</span>
-          <span class="poem-line">तुम्हारे बिना अधूरी है हर आस।</span>
-          <span class="poem-line">जन्मदिन की ढेरों शुभकामनाएं,</span>
-          <span class="poem-line">मेरी Chiku, मेरी जान, मेरी दुआएं। 💕</span>
+          <span class="poem-line">Tum keval special nhi —</span>
+          <span class="poem-line">you are way more than that.</span>
+          <span class="poem-line">Happy Birthday, Chiku. 🌹</span>
+          <span class="poem-line">I am so lucky to have you. 💖</span>
         </div>
       </div>
     </div>
     <button class="next-btn" onclick="goScene(6)" style="margin-top:1.5rem;">My Promises 💍</button>
   </div>
 </div>
+
 
 <!-- ===== SCENE 6: PROMISES ===== -->
 <div class="scene" id="s6">
@@ -714,9 +758,10 @@
     </div>
   </div>
   <button class="next-btn" id="s6next" style="margin-top:2rem;opacity:0;transition:opacity 0.5s ease;" onclick="goScene(7)">
-    One last surprise... 🎆
+    more ... 🎆
   </button>
 </div>
+
 
 <!-- ===== SCENE 7: GRAND FINALE ===== -->
 <div class="scene" id="s7">
@@ -725,15 +770,17 @@
     <div class="finale-title">Happy Birthday</div>
     <div class="finale-name">Chiku!</div>
     <div class="finale-hearts">🌹 💕 🌹 💕 🌹</div>
-    <div class="finale-sig">Forever Yours 💖</div>
+    <div class="finale-sig">💖💖💖💖💖💖💖</div>
     <div class="finale-msg">तुम्हारे जन्मदिन पर ढेर सारा प्यार 🌹</div>
   </div>
 </div>
+
 
 <!-- Countdown overlay -->
 <div id="countdown-overlay">
   <div class="countdown-num" id="countdown-num">3</div>
 </div>
+
 
 <!-- Lightbox -->
 <div id="lightbox">
@@ -744,6 +791,7 @@
     <button class="lb-btn" onclick="lbNav(1)">Next →</button>
   </div>
 </div>
+
 
 <script src="photos.js"></script>
 <script>
@@ -758,8 +806,10 @@ function shuffle(arr) {
 const THUMB='Chiku_thumb/', FULL='Chiku/';
 let currentScene = 1;
 
+
 /* Haptic feedback helper */
 function vibrate(p){try{if(navigator.vibrate)navigator.vibrate(p);}catch(e){}}
+
 
 function startCountdown() {
   const overlay = document.getElementById('countdown-overlay');
@@ -772,6 +822,7 @@ function startCountdown() {
   void numEl.offsetWidth;
   numEl.style.animation = 'countPop 0.9s ease-out forwards';
   vibrate(50);
+
 
   const tick = setInterval(() => {
     count--;
@@ -791,6 +842,7 @@ function startCountdown() {
   }, 1000);
 }
 
+
 function goScene(n) {
   vibrate(20);
   document.getElementById('s'+currentScene).classList.remove('active');
@@ -802,6 +854,7 @@ function goScene(n) {
   if(n===7) startFireworks();
 }
 
+
 /* ============================================================
    SCENE 2 — PINEAPPLE CAKE (Canvas)
    ============================================================ */
@@ -811,16 +864,19 @@ function goScene(n) {
   const CW=360, CH=300;
   canvas.width=CW; canvas.height=CH;
 
+
   // Cake geometry
   const CX=CW/2, CAKE_W=260, CAKE_BOTTOM=272;
   const LH=50, CH2=12; // layer height, cream height
   const LEFT=CX-CAKE_W/2;
   const CAKE_TOP=CAKE_BOTTOM-LH*3-CH2*2;
 
+
   // State
   let flamesOn=true, blown=false, cutDone=false;
   let smokeP=[], cutX=null, splitL=0, splitR=0;
   let t=0, dragging=false, dragStartX=null;
+
 
   // ── Drawing helpers ──
   function spongeLayer(x,y,w,h,tr=0,br=0){
@@ -843,6 +899,7 @@ function goScene(n) {
     for(let i=0;i<7;i++){ctx.beginPath();ctx.arc(x+25+i*(w-50)/6,y+h/2,3,0,Math.PI*2);ctx.fill();}
   }
 
+
   function creamLayer(x,y,w,h){
     const g=ctx.createLinearGradient(x,y,x,y+h);
     g.addColorStop(0,'#FFFFFF'); g.addColorStop(1,'#F0E8D8');
@@ -851,6 +908,7 @@ function goScene(n) {
     ctx.fillStyle='#FFFAF0';
     for(let i=0;i<4;i++){ctx.beginPath();ctx.ellipse(x+30+i*(w-60)/3,y+h+5,5,7,0,0,Math.PI*2);ctx.fill();}
   }
+
 
   function topCream(x,y,w){
     const g=ctx.createLinearGradient(x,y-22,x,y);
@@ -871,6 +929,7 @@ function goScene(n) {
     });
   }
 
+
   function pineappleChunks(topY){
     const chunks=[CX-85,CX-45,CX-5,CX+35,CX+75];
     chunks.forEach(cx=>{
@@ -889,6 +948,7 @@ function goScene(n) {
     ctx.fillStyle='#228B22'; ctx.beginPath(); ctx.ellipse(CX+82,topY-38,13,6,-0.4,0,Math.PI*2); ctx.fill();
     ctx.fillStyle='#32CD32'; ctx.beginPath(); ctx.ellipse(CX+82,topY-38,8,3.5,-0.4,0,Math.PI*2); ctx.fill();
   }
+
 
   function candles(topY,time){
     [CX-75,CX,CX+75].forEach((cx,i)=>{
@@ -920,6 +980,7 @@ function goScene(n) {
     });
   }
 
+
   function plate(){
     ctx.fillStyle='rgba(0,0,0,0.15)';
     ctx.beginPath(); ctx.ellipse(CX,CAKE_BOTTOM+9,CAKE_W/2+22,13,0,0,Math.PI*2); ctx.fill();
@@ -929,6 +990,7 @@ function goScene(n) {
     ctx.beginPath(); ctx.ellipse(CX,CAKE_BOTTOM+5,CAKE_W/2+22,15,0,0,Math.PI*2); ctx.fill();
     ctx.strokeStyle='#D4C4A8'; ctx.lineWidth=1; ctx.stroke();
   }
+
 
   function wholeCake(){
     spongeLayer(LEFT,CAKE_BOTTOM-LH,CAKE_W,LH,0,8);
@@ -940,6 +1002,7 @@ function goScene(n) {
     pineappleChunks(CAKE_TOP);
     candles(CAKE_TOP,t);
   }
+
 
   function crossSection(x,y,w,h){
     // Show layers in cross-section
@@ -954,6 +1017,7 @@ function goScene(n) {
     ctx.fillRect(x+5,y+lh2*2+ch3*2-8,w-10,6);
     ctx.fillRect(x+5,y+lh2-4,w-10,6);
   }
+
 
   function splitCake(){
     const gap=splitL+splitR;
@@ -975,6 +1039,7 @@ function goScene(n) {
     ctx.restore();
     ctx.restore();
   }
+
 
   function render(){
     ctx.clearRect(0,0,CW,CH);
@@ -1002,6 +1067,7 @@ function goScene(n) {
   }
   render();
 
+
   // ── Interactions ──
   function getCanvasPos(e){
     const r=canvas.getBoundingClientRect();
@@ -1009,6 +1075,7 @@ function goScene(n) {
     const cy=(e.touches?e.touches[0].clientY:e.clientY)-r.top;
     return{x:cx*(CW/r.width),y:cy*(CH/r.height)};
   }
+
 
   function blowAllCandles(){
     if(blown)return;
@@ -1023,6 +1090,7 @@ function goScene(n) {
     launchConfetti();
     vibrate([50,30,50]);
   }
+
 
   function animateCut(){
     if(cutDone)return; cutDone=true;
@@ -1052,17 +1120,21 @@ function goScene(n) {
     },12);
   }
 
+
   // Tap to blow candles OR cut cake
   function handleTap(){
     if(!blown){ blowAllCandles(); return; }
     if(!cutDone){ animateCut(); }
   }
 
+
   canvas.addEventListener('click', handleTap);
   canvas.addEventListener('touchend', e=>{ e.preventDefault(); handleTap(); }, {passive:false});
 
+
   window._cakeBlown=()=>blown;
 })();
+
 
 function launchConfetti() {
   const colors = ['#e8174a','#ff6b9d','#f5c842','#ff4d7d','#fff0f5','#a855f7'];
@@ -1084,6 +1156,7 @@ function launchConfetti() {
   }
 }
 
+
 /* ============================================================
    SCENE 5 — LETTER
    ============================================================ */
@@ -1094,6 +1167,7 @@ function openLetter() {
   setTimeout(() => lc.classList.add('open'), 50);
   spawnHeart(window.innerWidth/2, window.innerHeight/2, 5);
 }
+
 
 /* ============================================================
    SCENE 6 — PROMISES
@@ -1112,6 +1186,7 @@ function revealPromise(el, text) {
   }
 }
 
+
 /* ============================================================
    SPHERE — Two-phase intro
    ============================================================ */
@@ -1127,7 +1202,8 @@ function initSphere() {
   const counterEl=document.getElementById('sphere-counter');
   const s4el=document.getElementById('s4');
 
-  // ── PHASE 1: Floating photo cards zigzag (0–15s) ──
+
+  // ── PHASE 1: Floating photo cards zigzag (0–60s) ──
   const FLOAT_COUNT = photos.length;
   const sizes=[65,75,80,70,85,72,68,78,82,66,74,88,70,76,64,80];
   for(let i=0;i<FLOAT_COUNT;i++){
@@ -1148,10 +1224,12 @@ function initSphere() {
     }, i*200);
   }
 
+
   // ── PHASE 2: Sphere appears after 15s ──
   setTimeout(()=>{
     const wrap=document.getElementById('sphere-intro-wrap');
     wrap.classList.add('sphere-visible');
+
 
     // Build sphere cards
     function fibPos(i,total){
@@ -1163,6 +1241,7 @@ function initSphere() {
       const lon=(theta*180/Math.PI)%360;
       return{lat,lon};
     }
+
 
     const cards=[];
     let photoIdx=0, labelIdx=0;
@@ -1179,6 +1258,7 @@ function initSphere() {
       card.style.transform=`rotateY(${lon}deg) rotateX(${-lat}deg) translateZ(${RADIUS}px)`;
       cards.push({el:card,img});
     }
+
 
     let swapCard=0;
     setInterval(()=>{
@@ -1197,8 +1277,10 @@ function initSphere() {
       },900);
     },SWAP_MS);
 
+
     window._galleryPhotos=photos;
   }, 60000);
+
 
   // Shooting stars (start immediately)
   function spawnStar(){
@@ -1215,6 +1297,7 @@ function initSphere() {
   setInterval(()=>{ if(currentScene===4&&Math.random()>0.4) spawnStar(); },4500);
 }
 
+
 /* ============================================================
    FIREWORKS
    ============================================================ */
@@ -1224,8 +1307,10 @@ function startFireworks() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
+
   const particles = [];
   const COLORS = ['#e8174a','#ff6b9d','#f5c842','#ff4d7d','#fff0f5','#a855f7','#3b82f6'];
+
 
   function createBurst(x, y) {
     const color = COLORS[Math.floor(Math.random()*COLORS.length)];
@@ -1240,10 +1325,12 @@ function startFireworks() {
     }
   }
 
+
   // Auto-launch bursts
   setInterval(()=>{
     createBurst(Math.random()*canvas.width, Math.random()*canvas.height*0.7);
   }, 600);
+
 
   function loop() {
     ctx.fillStyle='rgba(13,0,16,0.15)';
@@ -1265,6 +1352,7 @@ function startFireworks() {
   }
   loop();
 
+
   // Initial burst
   setTimeout(()=>{
     createBurst(canvas.width*0.3, canvas.height*0.4);
@@ -1272,6 +1360,7 @@ function startFireworks() {
     createBurst(canvas.width*0.5, canvas.height*0.5);
   }, 300);
 }
+
 
 /* ============================================================
    PETAL CANVAS
@@ -1298,11 +1387,13 @@ function startFireworks() {
   loop();
 })();
 
+
 /* ============================================================
    FLOATING HEARTS
    ============================================================ */
 /* Emoji pool — roses + hearts */
 const FLOAT_EMOJIS = ['🌹','🌹','💕','💖','💗','💓','🌸','🌹','💕','💖','🌹','✨'];
+
 
 function spawnHeart(x,y,count){
   for(let i=0;i<count;i++){
@@ -1318,6 +1409,7 @@ function spawnHeart(x,y,count){
     setTimeout(()=>el.remove(),4500);
   }
 }
+
 
 /* Tap/click burst — bigger burst with roses */
 document.addEventListener('click',e=>{
@@ -1335,6 +1427,7 @@ document.addEventListener('click',e=>{
     setTimeout(()=>el.remove(),4500);
   }
 });
+
 
 /* Touch burst (separate from click to avoid double-fire on mobile) */
 document.addEventListener('touchstart',e=>{
@@ -1354,6 +1447,7 @@ document.addEventListener('touchstart',e=>{
   }
 },{passive:true});
 
+
 /* Ambient floating roses & hearts — rise from bottom continuously */
 setInterval(()=>{
   const el=document.createElement('div');
@@ -1369,6 +1463,7 @@ setInterval(()=>{
   setTimeout(()=>el.remove(),(dur*1000)+200);
 },900);
 
+
 /* ============================================================
    SPARKLE
    ============================================================ */
@@ -1383,6 +1478,7 @@ document.addEventListener('mousemove',e=>{
     setTimeout(()=>s.remove(),1400);
   }
 });
+
 
 /* ============================================================
    LIGHTBOX
@@ -1408,12 +1504,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft')lbNav(-1);
 });
 
+
 /* ============================================================
    MUSIC — Two-track system
    ============================================================ */
 const t1=document.getElementById('track1');
 const t2=document.getElementById('track2');
 let activeTrack=null, musicPaused=false;
+
 
 function startTrack1(){
   if(activeTrack===t1)return;
@@ -1425,6 +1523,7 @@ function startTrack1(){
   document.getElementById('music-label').textContent='Pause';
 }
 
+
 function switchToTrack2(){
   t1.pause(); t1.currentTime=0;
   t2.play().catch(()=>{});
@@ -1432,6 +1531,7 @@ function switchToTrack2(){
   document.getElementById('music-icon').textContent='🔇';
   document.getElementById('music-label').textContent='Pause';
 }
+
 
 function toggleMusic(){
   const icon=document.getElementById('music-icon');
@@ -1448,3 +1548,4 @@ function toggleMusic(){
 </script>
 </body>
 </html>
+
